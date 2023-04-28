@@ -1,0 +1,111 @@
+*
+{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+$facebookcolor:#3b5998;
+
+@mixin responsive($width)
+{
+    @media screen and (max-width: $width){
+        @content;
+    }
+}
+
+#inscription
+{
+    height: 100vh;
+
+    .inscription-child
+    {
+        margin: 0px auto;
+        width: 450px;
+
+        @include responsive(992px)
+        {
+            width: auto;
+        }
+
+        h2
+        {
+            font-size: 40px;
+            font-weight: 800;
+        }
+
+        form
+        {
+        
+            input[type="text"],
+            input[type="email"],
+            input[type="password"]
+            {
+                background-color: #f8f8f8 !important;
+            }
+
+            label
+            {
+                color: #363636;
+            }
+
+            .password-input
+            {
+                position: relative;
+                .showpass
+                {
+                    cursor: pointer;
+                    position: absolute;
+                    right: 3%;
+                    top: 50%;
+                    transform: translateY(-50%);
+                }
+            }
+
+            button[type="submit"]
+            {
+                color: white;
+                background-color: #495E8C;
+            }
+        }
+
+        .separator
+        {
+            div
+            {
+                border-bottom: 1px solid #ddd;
+            }
+        }
+
+        .third-party-up
+        {
+            button
+            {
+                border: 1px solid #dedede;
+                background-color: transparent;
+                border-radius: 5px;
+                font-size: 15px;
+                i
+                {
+                    font-size: 30px;
+                }
+
+                &.facebook-btn
+                {
+                    i
+                    {
+                        color: $facebookcolor;
+                    }
+                }
+            }
+        }
+    }
+
+    .inscription-image-box
+    {
+        @include responsive(768px)
+        {
+            display: none;
+        }
+    }
+}

@@ -1,0 +1,64 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+#inscription {
+  height: 100vh;
+}
+#inscription .inscription-child {
+  margin: 0px auto;
+  width: 450px;
+}
+@media screen and (max-width: 992px) {
+  #inscription .inscription-child {
+    width: auto;
+  }
+}
+#inscription .inscription-child h2 {
+  font-size: 40px;
+  font-weight: 800;
+}
+#inscription .inscription-child form input[type=text],
+#inscription .inscription-child form input[type=email],
+#inscription .inscription-child form input[type=password] {
+  background-color: #f8f8f8 !important;
+}
+#inscription .inscription-child form label {
+  color: #363636;
+}
+#inscription .inscription-child form .password-input {
+  position: relative;
+}
+#inscription .inscription-child form .password-input .showpass {
+  cursor: pointer;
+  position: absolute;
+  right: 3%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+#inscription .inscription-child form button[type=submit] {
+  color: white;
+  background-color: #495E8C;
+}
+#inscription .inscription-child .separator div {
+  border-bottom: 1px solid #ddd;
+}
+#inscription .inscription-child .third-party-up button {
+  border: 1px solid #dedede;
+  background-color: transparent;
+  border-radius: 5px;
+  font-size: 15px;
+}
+#inscription .inscription-child .third-party-up button i {
+  font-size: 30px;
+}
+#inscription .inscription-child .third-party-up button.facebook-btn i {
+  color: #3b5998;
+}
+@media screen and (max-width: 768px) {
+  #inscription .inscription-image-box {
+    display: none;
+  }
+}/*# sourceMappingURL=file.css.map */
